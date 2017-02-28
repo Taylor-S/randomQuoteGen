@@ -1,0 +1,72 @@
+.preloadScreen
+    position: fixed
+    z-index: 10
+    background: #9EB9B9
+    height: 100vh
+    width: 100vw
+
+#imgPreload
+    opacity: 0
+    background-image: url('https://static.pexels.com/photos/196145/pexels-photo-196145.jpeg'), url('https://static.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg'), url('https://static.pexels.com/photos/1826/wood-nature-sunny-forest.jpg'), url('https://static.pexels.com/photos/189848/pexels-photo-189848.jpeg'), url('https://static.pexels.com/photos/63911/pexels-photo-63911.jpeg')
+
+.container-fluid
+    height: 100vh
+    background-color: #9EB9B9
+    padding: 0 !important
+
+    #base
+        width: 100%
+        height: 100%
+        display: flex
+        justify-content: center
+        background-size: cover
+
+
+        .container
+            position: relative
+            background-color: rgba(255, 255, 255, 0.5)
+            margin: 100px 0
+            display: flex
+            flex-direction: column
+            justify-content: center
+            text-align: center
+            width: 600px
+            height: 350px
+            border-radius: 20px
+            box-shadow: 1px 1px 4px black
+
+            h1, p
+            text-shadow: 1px 1px 2px black
+            color: #fff
+            font-family: 'Alegreya', serif
+            h1
+                font-style: italic
+            p
+                align-self: flex-start
+                margin-top: 20px
+                margin-left: 10%
+                font-size: 22px
+
+            .button
+                position: absolute
+                bottom: 20px
+                right: 20px
+                background-color: #8521ff
+                border-radius: 20px
+                width: 200px
+                height: 40px
+                border: 0px
+                &:hover
+                    background-color: #cc9efa
+
+
+    #base.mountain
+        background-image: url('https://static.pexels.com/photos/196145/pexels-photo-196145.jpeg')
+    #base.sun
+        background-image: url('https://static.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg')
+    #base.forest
+        background-image: url('https://static.pexels.com/photos/1826/wood-nature-sunny-forest.jpg')
+    #base.ocean
+        background-image: url('https://static.pexels.com/photos/63911/pexels-photo-63911.jpeg')
+    #base.sunflower
+        background-image: url('https://static.pexels.com/photos/189848/pexels-photo-189848.jpeg')

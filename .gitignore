@@ -18,3 +18,8 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+
+build systems
+##############
+node_modules/
+bower_components/
