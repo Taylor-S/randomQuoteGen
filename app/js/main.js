@@ -1,15 +1,15 @@
+// Load all images before access to site
 $(window).on('load', function(){
     $('.preloadScreen').fadeOut(2000);
 });
 
 
-
 $(document).ready(function() {
 
-    // initial function call///////////
+    // initial function call/////
     newQuote();
 
-    // toggle background function///////
+    // toggle background///////
     $('.button').click(function toggleClass() {;
         $('#base').fadeTo('slow',0.2, function(){
             var classes = ['mountain', 'sun', 'forest', 'ocean', 'sunflower'];
@@ -25,7 +25,7 @@ $(document).ready(function() {
 
 });
 
-// function defined///////////////
+// AJAX quote function defined///////
 function newQuote() {
     var quote = $('#quote'),
     author = $('#author');
@@ -40,13 +40,21 @@ function newQuote() {
             format: 'jsonp'
         },
         success: function (data) {
-            quote.html(data.quoteText);
+            quote.animate({opacity: 0}, 500, function() {
+              quote.animate({opacity: 1}, 500).html(data.quoteText);
+            });
+          author.animate({opacity: 0}, 500, function() {
             if (data.quoteAuthor == ""){
-                author.html("~ Anonymous");
+                author.animate({opacity: 1}, 500).html("~ Anonymous");
+                // tweet Code
+                $('#tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text='+data.quoteText + " ~ Anonymous").attr('target', '_blank');
             }
             else {
-                author.html("~ " + data.quoteAuthor);
+                author.animate({opacity: 1}, 500).html("~ " + data.quoteAuthor);
+                // tweet Code
+                $('#tweetQuote').attr('href', 'https://twitter.com/intent/tweet?text='+data.quoteText + " ~ "+data.quoteAuthor).attr('target', '_blank');
             }
+          });
         }
     });
 }

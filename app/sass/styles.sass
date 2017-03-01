@@ -10,12 +10,14 @@
     background-image: url('https://static.pexels.com/photos/196145/pexels-photo-196145.jpeg'), url('https://static.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg'), url('https://static.pexels.com/photos/1826/wood-nature-sunny-forest.jpg'), url('https://static.pexels.com/photos/189848/pexels-photo-189848.jpeg'), url('https://static.pexels.com/photos/63911/pexels-photo-63911.jpeg')
 
 .container-fluid
-    height: 100vh
+    height: 100%
+    min-height: 100vh
     background-color: #9EB9B9
     padding: 0 !important
 
     #base
         width: 100%
+        min-height: 100vh
         height: 100%
         display: flex
         justify-content: center
@@ -41,11 +43,24 @@
             font-family: 'Alegreya', serif
             h1
                 font-style: italic
-            p
-                align-self: flex-start
-                margin-top: 20px
-                margin-left: 10%
-                font-size: 22px
+
+            div
+                display: flex
+                justify-content: flex-start
+                p
+                    margin-top: 20px
+                    margin-left: 10%
+                    font-size: 22px
+                a
+                    width: 50px
+                    margin-top: 20px
+                    margin-left: 10px
+                    padding: 5px 0 0 0
+                    height: 30px
+                    text-align: center
+                    p
+                        margin: 0
+                        font-size: 12px
 
             .button
                 position: absolute
